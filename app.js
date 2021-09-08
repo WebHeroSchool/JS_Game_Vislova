@@ -8,7 +8,7 @@ levels.forEach(level => {
   level.addEventListener('click', () => {
     levels.forEach(lvl => lvl.classList.remove('active_game'));
     level.classList.add('active_game');
-  })
+  });
 });
 
 let deleteCards = () => {
@@ -16,9 +16,9 @@ let deleteCards = () => {
   wrapperGame.style.display = 'none';
   wrapperGame.innerHTML = '';
   wrapperGame.className = 'wrapper-game';
-}
+};
 
-let renderCard = number => {
+let renderCard = (number) => {
   for (let i = 0; i < number; i++) {
     let card = document.createElement('div');
     let cardInner = document.createElement('div');
@@ -49,7 +49,7 @@ let renderCard = number => {
 }
 
 
-let chooseLevel = level => {
+let chooseLevel = (level) => {
   switch (level) {
     case 'Простой':
       renderCard(3);
@@ -63,7 +63,7 @@ let chooseLevel = level => {
       renderCard(10);
       wrapperGame.classList.add('hard');
       break;
-}}
+}};
 
 let startGame = () => {
   document.querySelector('.wrapper').style.display = 'none';

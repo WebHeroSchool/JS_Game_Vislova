@@ -2,8 +2,10 @@ body {
   margin: 0;
   max-height: 100vh;
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  background: no-repeat url('../img/background.jpg');
+  background-color: #000;
+  background-image: url('../img/background.jpg');
   background-size: cover;
+  background-repeat:no-repeat ;
   overflow: hidden;
 }
 
@@ -56,7 +58,7 @@ body {
   color: #fff;
 }
 
-.subtitle span{
+.subtitle span {
   font-weight: normal;
 }
 
@@ -78,7 +80,8 @@ body {
 }
 
 .active_game::after {
-  position: absolute; 
+  position: absolute;
+
   content: '';
   width: 18px;
   height: 18px;
@@ -94,7 +97,7 @@ body {
   height: 95px;
   background: #d62b2e;
   border-radius: 7px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   text-decoration: none;
   font-weight: bold;
   font-size: calc(20px + 12 * (100vw / 1440));
@@ -123,7 +126,7 @@ body {
   left: 74.3%;
   top: 53.5vh;
   transform: rotate(39.26deg);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(-2px 0 1px rgba(0, 0, 0, 0.3));
 }
 
 .flip-card {
@@ -224,7 +227,6 @@ body {
   }
 }
 
-
 @media (max-width: 1366px) {
   .card-1 {
     left: 53.67%;
@@ -239,10 +241,9 @@ body {
   .middle {
     width: 70%;
   }
-
 }
 
-@media (max-width:1210px) {
+@media (max-width: 1210px) {
   .middle {
     width: 75%;
   }
@@ -257,7 +258,7 @@ body {
   }
 }
 
-@media (max-width:1095px) {
+@media (max-width: 1095px) {
   .hard {
     width: 100%;
   }
@@ -265,7 +266,6 @@ body {
 
 
 @media (max-width: 1024px) {
-
   .level {
     margin-bottom: 5vh;
   }
@@ -294,7 +294,7 @@ body {
   }
 }
 
-@media (max-width:985px) {
+@media (max-width: 985px) {
   .hard {
     width: 90%;
   }
@@ -411,7 +411,7 @@ body {
   }
 }
 
-@media (max-width:543px) {
+@media (max-width: 543px) {
   .hard .flip-card {
     height: 140.4px;
     width: 90px;
