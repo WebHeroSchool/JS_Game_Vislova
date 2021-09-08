@@ -1,0 +1,451 @@
+body {
+  margin: 0;
+  max-height: 100vh;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background: no-repeat url('../img/background.jpg');
+  background-size: cover;
+  overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 12.8vh 0 0 103px;
+  width: auto;
+  max-width: 1440px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.wrapper-game {
+  display: none;
+  margin: 0 auto;
+  padding-left: 20px;
+  width: auto;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.hard {
+  width: 90%;
+  max-width: 1440px;
+}
+
+.middle {
+  width: 60%;
+  max-width: 1440px;
+}
+
+.title {
+  margin: 0 0 0.4vh 0;
+  font-weight: bold;
+  font-size: calc(24px + 33 * (100vw / 1440));
+  line-height: 67px;
+  color: #fff;
+}
+
+.subtitle {
+  margin: 0 0 6vh 0;
+  padding-left: 3px;
+  font-weight: bold;
+  font-size: calc(13px + 6 * (100vw / 1440));
+  line-height: 22px;
+  color: #fff;
+}
+
+.subtitle span{
+  font-weight: normal;
+}
+
+.level__list {
+  margin-top: 0;
+  margin-bottom: 14vh;
+  padding-left: 49px;
+  list-style: none;
+}
+
+.level {
+  position: relative;
+  margin: 0 0 29px 0;
+  font-weight: bold;
+  font-size: calc(23px + 27 * (100vw / 1440));
+  line-height: 55px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.active_game::after {
+  position: absolute; 
+  content: '';
+  width: 18px;
+  height: 18px;
+  left: -45px;
+  top: calc(50% - 8px);
+  background: #d62b2e;
+  transform: rotate(45deg);
+}
+
+.button {
+  padding: 30px 85px;
+  width: 352px;
+  height: 95px;
+  background: #d62b2e;
+  border-radius: 7px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  text-decoration: none;
+  font-weight: bold;
+  font-size: calc(20px + 12 * (100vw / 1440));
+  line-height: 39px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.back-card {
+  position: absolute;
+  content: '';
+  width: 218px;
+  height: 341px;
+  background: no-repeat url('../img/card-reverse.png');
+  background-size: contain;
+}
+
+.card-1 {
+  left: 62%;
+  top: 52vh;
+  transform: rotate(11.9deg);
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+}
+
+.card-2 {
+  left: 74.3%;
+  top: 53.5vh;
+  transform: rotate(39.26deg);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
+}
+
+.flip-card {
+  width: 218px;
+  height: 341px;
+  perspective: 1000px;
+  margin: 10px 23px 10px 0;
+}
+
+.flip-card:hover {
+  box-shadow: 10px 10px 15px #000;
+  transform: translateY(-30px) rotateZ(-2deg);
+}
+
+.flip-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.rotate {
+  transform: rotateY(180deg);
+}
+
+.flip-card__front,
+.flip-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card__front {
+  position: absolute;
+  background: no-repeat url('img/card-reverse.png');
+  background-size: cover;
+}
+
+.flip-card__back {
+  position: absolute;
+  background: no-repeat url('img/card-not-bug.png');
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+
+.flip-card__back-bug {
+  position: absolute;
+  background: no-repeat url('img/card-bug.png');
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+
+@media (min-width: 2080px) {
+  .hard {
+    width: 50%;
+  }
+
+  .middle {
+    width: 35%;
+  }
+}
+
+@media (max-width: 2410px) {
+  .hard {
+    width: 60%;
+  }
+}
+
+@media (max-width: 2100px) {
+  .hard {
+    width: 75%;
+  }
+
+  .middle {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1610px) {
+  .hard {
+    width: 90%;
+  }
+
+  .middle {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1445px) {
+  .hard {
+    width: 100%;
+  }
+
+  .middle {
+    width: 65%;
+  }
+}
+
+
+@media (max-width: 1366px) {
+  .card-1 {
+    left: 53.67%;
+    top: 40.8%;
+  }
+
+  .card-2 {
+    left: 66.3%;
+    top: 39.3%;
+  }
+
+  .middle {
+    width: 70%;
+  }
+
+}
+
+@media (max-width:1210px) {
+  .middle {
+    width: 75%;
+  }
+
+  .hard {
+    width: 90%;
+  }
+
+  .hard .flip-card {
+    width: 174px;
+    height: 272.8px;
+  }
+}
+
+@media (max-width:1095px) {
+  .hard {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 1024px) {
+
+  .level {
+    margin-bottom: 5vh;
+  }
+
+  .card-1 {
+    width: 174px;
+    height: 272.8px;
+    left: 53.67%;
+    top: 40.8%;
+  }
+
+  .card-2 {
+    width: 174px;
+    height: 272.8px;
+    left: 66.3%;
+    top: 39.3%;
+  }
+
+  .flip-card {
+    width: 174px;
+    height: 272.8px;
+  }
+
+  .middle {
+    width: 75%;
+  }
+}
+
+@media (max-width:985px) {
+  .hard {
+    width: 90%;
+  }
+
+  .hard .flip-card {
+    width: 130.8px;
+    height: 204.6px;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    margin-bottom: 0;
+  }
+
+  .title {
+    padding-top: 20vh;
+  }
+
+  .level__list {
+    padding-left: 0;
+  }
+
+  .level {
+    margin-bottom: 3vh;
+  }
+
+  .active_game::after {
+    display: none;
+  }
+
+  .active_game {
+    color: #d62b2e;
+  }
+
+  .level:hover {
+    content: '';
+    color: #d62b2e;
+  }
+
+  .card-1 {
+    width: 152.6px;
+    height: 238.7px;
+    left: 30.8%;
+    top: 6%;
+  }
+
+  .card-2 {
+    width: 152.6px;
+    height: 238.7px;
+    left: 46.3%;
+    top: 7%;
+  }
+
+  .middle {
+    width: 80%;
+  }
+
+  .hard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 10vh 50px;
+  }
+
+  .title {
+    margin-bottom: 5vh;
+    padding-top: 2vh;
+    font-size: calc(35px + 35 * ((100vw - 320px ) / 1440));
+    line-height: 35px;
+  }
+
+  .subtitle {
+    margin-bottom: 6vh;
+    font-size: calc(20px + 10 * ((100vw - 320px ) / 1440));
+  }
+
+  .level {
+    font-size: calc(35px + 35 * ((100vw - 320px ) / 1440));
+    line-height: 30px;
+  }
+
+  .level_list {
+    margin-bottom: 7vh;
+    text-align: center;
+  }
+
+  .button {
+    padding: 15px 70px;
+  }
+
+  .flip-card {
+    width: 130.8px;
+    height: 204.6px;
+  }
+
+  .middle {
+    width: 90%;
+  }
+
+  .hard {
+    width: 85%;
+  }
+
+  .card-1 {
+    display: none;
+  }
+
+  .card-2 {
+    display: none;
+  }
+}
+
+@media (max-width:543px) {
+  .hard .flip-card {
+    height: 140.4px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    max-height: none;
+  }
+
+  .wrapper {
+    padding: 10vh 30px;
+    text-align: center;
+  }
+
+  .wrapper-game {
+    align-content: flex-start;
+    overflow: scroll;
+  }
+
+  .subtitle {
+    margin-bottom: 5vh;
+  }
+
+  .level {
+    margin-bottom: 2vh;
+  }
+
+  .button {
+    padding: 2vh 20px;
+  }
+
+  .middle {
+    width: 98%;
+  }
+}
