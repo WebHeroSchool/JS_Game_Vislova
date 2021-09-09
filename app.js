@@ -4,9 +4,9 @@ const wrapperGame = document.querySelector('.wrapper-game');
 
 let levels = document.querySelectorAll('.level');
 
-levels.forEach(level => {
+levels.forEach((level) => {
   level.addEventListener('click', () => {
-    levels.forEach(lvl => lvl.classList.remove('active_game'));
+    levels.forEach((lvl) => lvl.classList.remove('active_game'));
     level.classList.add('active_game');
   });
 });
