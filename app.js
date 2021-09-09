@@ -42,7 +42,7 @@ let renderCard = (number) => {
       cardInner.classList.toggle('rotate');
       if (number === 1) cardBack.classList.add('flip-card__back-bug');
       let cards = document.querySelectorAll('.flip-card');
-      cards.forEach(card => card.addEventListener('click', deleteCards));
+      cards.forEach((card) => card.addEventListener('click', deleteCards));
     }
     card.addEventListener('click', rotate);
   }
