@@ -3,7 +3,7 @@ body {
   max-height: 100vh;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   background-color: #000;
-  background-image: url('../img/background.jpg');
+  background-image: url('img/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -110,7 +110,7 @@ body {
   content: '';
   width: 218px;
   height: 341px;
-  background: no-repeat url('../img/card-reverse.png');
+  background: no-repeat url('img/card-reverse.png');
   background-size: contain;
 }
 
