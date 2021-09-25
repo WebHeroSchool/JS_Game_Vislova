@@ -45,7 +45,7 @@ let renderCard = (number) => {
       cardInner.classList.toggle("rotate");
       let cards = document.querySelectorAll(".flip-card");
       cards.forEach((card) => card.addEventListener("click", deleteCards));
-    }
+    };
     card.addEventListener("click", rotate);
   }
 }
