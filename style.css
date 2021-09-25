@@ -137,7 +137,6 @@ body {
   margin: 10px 13px 10px 10px;
 }
 
-
 .flip-card:hover {
   filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
   transform: translateY(-30px) rotateZ(-2deg);
@@ -232,7 +231,7 @@ body {
     width: 80%;
   }
 
-  .flip-card { 
+  .flip-card {
     width: 14vw;
     min-width: 120px;
     height: 31vw;
@@ -351,7 +350,7 @@ body {
     text-align: center;
   }
 
-  .level__list { 
+  .level__list {
     padding-left: 0;
     width: 90%;
     margin: 0 auto;
@@ -372,7 +371,6 @@ body {
     top: 12vh;
   }
  
-
   .middle {
     width: 74%;
   }
