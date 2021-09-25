@@ -82,7 +82,6 @@ body {
   cursor: pointer;
 }
 
-
 .active_game::after {
   position: absolute;
   content: '';
@@ -186,10 +185,6 @@ body {
   background-position: center center;
   transform: rotateY(180deg);
 }
-
-
-
-/* переписываю все стили для других разрешений*/
 
 @media (max-width: 1440px) {
   .flip-card {
