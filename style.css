@@ -191,7 +191,6 @@ body {
   }
 }
 
-
 @media (max-width: 1370px) {
   .hard {
     width: 90%;
@@ -239,7 +238,7 @@ body {
 }
 
 @media (max-width: 1000px) and (orientation: landscape) {
-  .flip-card { 
+  .flip-card {
     margin-right: 0;
     width: 14vw;
     min-width: 120px;
@@ -337,7 +336,7 @@ body {
   }
 }
 
-@media (max-width: 850px) and (orientation: portrait)  {
+@media (max-width: 850px) and (orientation: portrait) {
   .wrapper {
     padding: 38.8vh 0 0 0;
   }
@@ -370,7 +369,7 @@ body {
     left: 40.2%;
     top: 12vh;
   }
- 
+
   .middle {
     width: 74%;
   }

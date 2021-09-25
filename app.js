@@ -40,7 +40,7 @@ let renderCard = (number) => {
     let rotate = () => {
       let random = Math.random();
       let randomNumber = Math.round(random*number) - 1;
-      let bug  = document.querySelectorAll(".flip-card__back")[randomNumber];
+      const bug  = document.querySelectorAll(".flip-card__back")[randomNumber];
       bug.classList.add("flip-card__back-bug");
       cardInner.classList.toggle("rotate");
       let cards = document.querySelectorAll(".flip-card");
@@ -48,7 +48,7 @@ let renderCard = (number) => {
     };
     card.addEventListener("click", rotate);
   }
-}
+};
 
 
 let chooseLevel = (level) => {
