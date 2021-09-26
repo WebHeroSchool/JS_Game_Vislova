@@ -45,9 +45,9 @@ let renderCard = (number) => {
         let i = 0;
         if (i === randomNumber) {
           card.classList.add("flip-card__back-bug");
-        };
+        }
         i += 1;
-      })
+      });
       cardInner.classList.toggle("rotate");
       let cards = document.querySelectorAll(".flip-card");
       cards.forEach((card) => card.addEventListener("click", deleteCards));
