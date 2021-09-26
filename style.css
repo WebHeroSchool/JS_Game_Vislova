@@ -202,7 +202,6 @@ body {
   }
 }
 
-
 @media (max-width: 1204px) {
   .wrapper {
     position: relative;
@@ -267,7 +266,7 @@ body {
     width: 90%;
   }
 
-  .flip-card { 
+  .flip-card {
     width: 14vw;
     min-width: 120px;
     height: 21vw;
@@ -292,7 +291,7 @@ body {
   }
 
 
-  .flip-card { 
+  .flip-card {
     width: 14vw;
     min-width: 115px;
     height: 19vw;
@@ -329,7 +328,7 @@ body {
     width: 60%;
   }
 
-  .flip-card { 
+  .flip-card {
     width: 14vw;
     min-width: 90px;
     height: 21vw;

@@ -40,11 +40,15 @@ let renderCard = (number) => {
     let rotate = () => {
       let random = Math.random();
       let randomNumber = Math.round(random*number) - 1;
-      const bug  = document.querySelectorAll(".flip-card__back")[randomNumber];
-      bug.classList.add("flip-card__back-bug");
+      let cards = document.querySelectorAll(".flip-card__back");
+      for (let i = 0 ; i < cards.length ; i++){
+        if (i == randomNumber) {
+            cards[i].classList.add("flip-card__back-bug");
+        }
+      }
       cardInner.classList.toggle("rotate");
-      let cards = document.querySelectorAll(".flip-card");
-      cards.forEach((card) => card.addEventListener("click", deleteCards));
+      let cards2 = document.querySelectorAll(".flip-card");
+      cards2.forEach((card) => card.addEventListener("click", deleteCards));
     };
     card.addEventListener("click", rotate);
   }
