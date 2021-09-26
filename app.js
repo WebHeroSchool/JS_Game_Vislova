@@ -40,15 +40,17 @@ let renderCard = (number) => {
     let rotate = () => {
       let random = Math.random();
       let randomNumber = Math.round(random*number) - 1;
-      let cards = document.querySelectorAll(".flip-card__back");
-      for (let i = 0 ; i < cards.length ; i++){
-        if (i == randomNumber) {
-            cards[i].classList.add("flip-card__back-bug");
-        }
-      }
+      let cardsBack = document.querySelectorAll(".flip-card__back");
+      cardsBack.forEach((card) => {
+        let i = 0;
+        if (i === randomNumber) {
+          card.classList.add("flip-card__back-bug");
+        };
+        i += 1;
+      })
       cardInner.classList.toggle("rotate");
-      let cards2 = document.querySelectorAll(".flip-card");
-      cards2.forEach((card) => card.addEventListener("click", deleteCards));
+      let cards = document.querySelectorAll(".flip-card");
+      cards.forEach((card) => card.addEventListener("click", deleteCards));
     };
     card.addEventListener("click", rotate);
   }
@@ -76,6 +78,6 @@ let startGame = () => {
   document.querySelector(".wrapper-game").style.display = "flex";
   let level = document.querySelector(".active_game").innerHTML;
   chooseLevel(level);
-}
+};
 
 btn.addEventListener("click", startGame);
