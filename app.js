@@ -39,14 +39,12 @@ let renderCard = (number) => {
 
     let rotate = () => {
       let random = Math.random();
-      let randomNumber = Math.round(random*number) - 1;
+      let randomNumber = Math.round(random * number);
       let cardsBack = document.querySelectorAll(".flip-card__back");
-      cardsBack.forEach((card) => {
-        let i = 0;
+      cardsBack.forEach((card, i) => {
         if (i === randomNumber) {
           card.classList.add("flip-card__back-bug");
         }
-        i += 1;
       });
       cardInner.classList.toggle("rotate");
       let cards = document.querySelectorAll(".flip-card");
