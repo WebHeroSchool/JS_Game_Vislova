@@ -384,6 +384,10 @@ body {
     line-height: 1.2em;
   }
 
+  .level__list {
+    width: 150px;
+  }
+
   .level {
     margin: 0 0 10px 0;
   }
