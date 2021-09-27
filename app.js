@@ -39,7 +39,7 @@ let renderCard = (number) => {
 
     let rotate = () => {
       let random = Math.random();
-      let randomNumber = Math.round(random * number);
+      let randomNumber = Math.floor(random * number);
       let cardsBack = document.querySelectorAll(".flip-card__back");
       cardsBack.forEach((card, i) => {
         if (i === randomNumber) {
